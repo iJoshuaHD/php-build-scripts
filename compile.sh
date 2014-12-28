@@ -55,15 +55,15 @@ else
 	fi
 fi
 
-#if type llvm-gcc >/dev/null 2>&1; then
-#	export CC="llvm-gcc"
-#	export CXX="llvm-g++"
+#if type llvm-gcc-4.8 >/dev/null 2>&1; then
+#	export CC="llvm-gcc-4.8"
+#	export CXX="llvm-g++-4.8"
 #	export AR="llvm-ar"
 #	export AS="llvm-as"
 #	export RANLIB=llvm-ranlib
 #else
-	export CC="gcc"
-	export CXX="g++"
+	export CC="gcc-4.8"
+	export CXX="g++-4.8"
 	export RANLIB=ranlib
 #fi
 
@@ -285,8 +285,8 @@ elif [ -z "$CFLAGS" ]; then
 fi
 
 if [ "$TOOLCHAIN_PREFIX" != "" ]; then
-		export CC="$TOOLCHAIN_PREFIX-gcc"
-		export CXX="$TOOLCHAIN_PREFIX-g++"
+		export CC="$TOOLCHAIN_PREFIX-gcc-4.8"
+		export CXX="$TOOLCHAIN_PREFIX-g++-4.8"
 		export AR="$TOOLCHAIN_PREFIX-ar"
 		export RANLIB="$TOOLCHAIN_PREFIX-ranlib"
 		export CPP="$TOOLCHAIN_PREFIX-cpp"
